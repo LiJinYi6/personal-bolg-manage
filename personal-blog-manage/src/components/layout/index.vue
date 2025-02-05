@@ -14,5 +14,9 @@ import Top from './top.vue'
 </script>
 
 <style scoped>
-
+.layoutContainer{
+    width: 100vw;
+    height: 100vh;
+    
+}
 </style>

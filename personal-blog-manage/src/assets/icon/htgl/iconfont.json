@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "19504588",
+      "name": "后台管理",
+      "font_class": "houtaiguanli",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    }
+  ]
+}
