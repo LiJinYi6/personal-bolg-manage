@@ -14,5 +14,20 @@ import Slider from './slider.vue'
 </script>
 
 <style scoped>
-
+.bottomContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: left;
+    /* align-content: center; */
+}
+.slider{
+    flex:1;
+    
+}
+.main{
+    flex:5;
+}
 </style>

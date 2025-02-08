@@ -13,10 +13,16 @@
 import Top from './top.vue'
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .layoutContainer{
     width: 100vw;
     height: 100vh;
-    
+    display: flex;
+    flex-direction: column;
+    .bottom{
+        margin-top:64px;
+        height: calc(100% - 64px);
+    }
 }
+
 </style>
