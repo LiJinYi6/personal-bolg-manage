@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Bottom: typeof import('./src/components/layout/bottom.vue')['default']
     Bottom2: typeof import('./src/components/layout/bottom2.vue')['default']
+    Card: typeof import('./src/components/card.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBadge: typeof import('element-plus/es')['ElBadge']
     ElButton: typeof import('element-plus/es')['ElButton']
