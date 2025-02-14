@@ -7,55 +7,28 @@
             </el-space>
         </div>
         <div class="centerPart">
-            
                 <div class="echarts">
-                    
-                        <div class="visitCount">
-                            <el-space :size="600">
-                                <h3 style="display:inline">访问量</h3>
-                            <div style="display:inline">
-                                <el-button>近一周</el-button>
-                                <el-button>近一月</el-button>
-                                <div class="charts" ref="charts1"></div>
-                            </div>
-                            </el-space>
-                            
-                        </div>
-                        <div class="dataView">
-                            <el-space :size="580">
-                                <h3 style="display:inline">数据检测</h3>
-                            <div style="display:inline">
-                                <el-button>近一周</el-button>
-                                <el-button>近一月</el-button>
-                            </div>
-                            </el-space>
-                        </div>
-                  
-                    
+                    <visitCount></visitCount>
+                    <dataView></dataView>
                 </div>
-                <div class="comments">
-
-                </div>
-            
-            
+                <comment></comment>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import * as echarts from 'echarts'
-import card from '../../components/card.vue';
+import comment from '../../components/home/comment.vue';
+import card from '../../components/home/card.vue';
 import { overList } from '../../utils/overview';
-let charts1=ref()
-let visitCharts=echarts.init(charts1.value)
+import visitCount from '../../components/home/visitCount.vue';
+import dataView from '../../components/home/dataView.vue';
 </script>
 
 <style scoped lang="less">
 .homeContainer{
     width: 100%;
     height: 100%;
-    padding:0px 20px;
+    padding:5px 20px;
     display: flex;
     flex-direction: column;
     .title{
@@ -63,7 +36,6 @@ let visitCharts=echarts.init(charts1.value)
     }
     .cardPart{
         flex:1.5;
-        
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -76,40 +48,15 @@ let visitCharts=echarts.init(charts1.value)
         display: flex;
         flex-direction: row;
         align-items: center;
+        padding-top: 10px;
         .echarts{
             width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            margin-right: 10px;
+            padding-right: 10px;
             flex:2;
-            
-            .visitCount{
-                background: white;
-                height: 49%;
-                width: 100%;
-                padding:10px;
-                border-radius: 8px;
-            }
-            .dataView{
-                
-                background: white;
-                height: 49%;
-                width: 100%;
-                border-radius: 8px;
-                padding:10px;
-            }
-        }
-        .comments{
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            margin-left: 10px;
-            padding:5px;
-            border-radius: 8px;
-            flex:1;
-            
         }
     }
 }
