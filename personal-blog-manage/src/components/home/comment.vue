@@ -9,13 +9,15 @@
             <commentItem :commentData="item"></commentItem>
         </template>
         <template #footer>
-            <el-pagination
+            <div class="card-footer">
+                <el-pagination
                 size="small"
                 background
                 layout="prev, pager, next"
                 :total="50"
                 class="mt-4"
              />
+            </div>
         </template>
     </el-card>
 </template>

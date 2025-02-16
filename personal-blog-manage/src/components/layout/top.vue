@@ -11,7 +11,7 @@
         <div class="topRight">
             <el-space :size="22">
                 <el-badge is-dot class="item">
-                <el-icon :size="20"><Message /></el-icon>
+                <el-icon :size="20" @click="openHandle"><Message /></el-icon>
                 </el-badge>
                 <el-avatar :size="38" :src="avatarUrl"/>
                 <el-switch
@@ -31,6 +31,12 @@
 import { ref } from 'vue';
 import { Moon, Sunny } from '@element-plus/icons-vue'
 let avatarUrl=ref('')
+const emit = defineEmits(['transeDrawer']);
+let drawer=ref<boolean>(false)
+const openHandle=()=>{
+    drawer.value=true
+    emit('transeDrawer',drawer.value)
+}
 </script>
 
 <style scoped lang="less">
